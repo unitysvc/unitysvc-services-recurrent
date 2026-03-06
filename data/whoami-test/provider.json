@@ -1,0 +1,11 @@
+{
+  "contact_email": "support@unitysvc.com",
+  "description": "Test provider for recurrent service execution. Uses whoami echo service that returns request details for any incoming request.",
+  "display_name": "Whoami Test",
+  "documents": {},
+  "homepage": "https://whoami.svcpass.com",
+  "name": "whoami-test",
+  "schema": "provider_v1",
+  "status": "ready",
+  "time_created": "2026-02-19T00:00:00Z"
+}

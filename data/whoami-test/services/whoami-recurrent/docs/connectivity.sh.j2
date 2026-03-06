@@ -1,0 +1,15 @@
+#!/bin/bash
+# Connectivity test for whoami recurrent service
+response=$(curl -s -X POST "${SERVICE_BASE_URL}" \
+  -H "Authorization: Bearer ${UNITYSVC_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://example.com", "port": 443}')
+
+echo "$response"
+
+if echo "$response" | grep -qi "whoami"; then
+  echo "unitysvc connectivity test successful"
+else
+  echo "unitysvc connectivity test failed"
+  exit 1
+fi

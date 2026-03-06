@@ -1,0 +1,6 @@
+#!/bin/bash
+# Send a test request to the whoami recurrent service
+curl -s -X POST "${SERVICE_BASE_URL}" \
+  -H "Authorization: Bearer ${UNITYSVC_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://example.com", "port": 443}'

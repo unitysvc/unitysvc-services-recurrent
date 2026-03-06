@@ -1,0 +1,77 @@
+{
+  "display_name": "Whoami Recurrent Test",
+  "documents": {
+    "Connectivity test": {
+      "category": "connectivity_test",
+      "description": "Verify connectivity to whoami upstream",
+      "file_path": "docs/connectivity.sh.j2",
+      "is_active": true,
+      "is_public": false,
+      "meta": {
+        "output_contains": "whoami"
+      },
+      "mime_type": "bash"
+    },
+    "Python code example": {
+      "category": "code_example",
+      "description": "Test the whoami endpoint with Python",
+      "file_path": "docs/code_example.py.j2",
+      "is_active": true,
+      "is_public": true,
+      "mime_type": "python"
+    },
+    "cURL code example": {
+      "category": "code_example",
+      "description": "Test the whoami endpoint with cURL",
+      "file_path": "docs/code_example.sh.j2",
+      "is_active": true,
+      "is_public": true,
+      "mime_type": "bash"
+    }
+  },
+  "name": "default",
+  "schema": "listing_v1",
+  "service_options": {
+    "ops_testing_parameters": {
+      "port": 443,
+      "url": "https://example.com"
+    },
+    "recurrence_allow_cron": true,
+    "recurrence_enabled": true,
+    "recurrence_max_interval_seconds": 86400,
+    "recurrence_min_interval_seconds": 1
+  },
+  "status": "ready",
+  "time_created": "2026-02-19T00:00:00Z",
+  "user_access_interfaces": {
+    "whoami-gateway": {
+      "access_method": "http",
+      "base_url": "${GATEWAY_BASE_URL}/whoami",
+      "description": "Send requests to the whoami echo service via UnitySVC gateway",
+      "request_transformer": {
+        "set_body": "{{ enrollment.parameters | tojson }}"
+      }
+    }
+  },
+  "user_parameters_schema": {
+    "properties": {
+      "port": {
+        "default": 443,
+        "description": "Target port to include in the recurrent request payload",
+        "title": "Port",
+        "type": "integer"
+      },
+      "url": {
+        "default": "https://example.com",
+        "description": "Target URL to include in the recurrent request payload",
+        "title": "URL",
+        "type": "string"
+      }
+    },
+    "required": [
+      "url",
+      "port"
+    ],
+    "type": "object"
+  }
+}

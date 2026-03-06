@@ -1,0 +1,32 @@
+{
+  "currency": "USD",
+  "description": "A test recurrent service that periodically sends requests to a whoami echo endpoint. Each execution POSTs the enrollment parameters (url, port) to the upstream, which echoes them back. Useful for testing the recurrence execution pipeline end-to-end.",
+  "details": {
+    "features": [
+      "Recurrent execution on configurable schedule",
+      "Interval-based or cron-based scheduling",
+      "Configurable target URL and port",
+      "Echo response for verification"
+    ]
+  },
+  "documents": {},
+  "name": "whoami-recurrent",
+  "payout_price": {
+    "description": "Platform retains 0% - test service",
+    "percentage": "100.00",
+    "type": "revenue_share"
+  },
+  "schema": "offering_v1",
+  "service_type": "undetermined",
+  "status": "ready",
+  "tagline": "Recurrent echo service for testing",
+  "time_created": "2026-02-19T00:00:00Z",
+  "upstream_access_interfaces": {
+    "whoami-upstream": {
+      "access_method": "http",
+      "api_key": null,
+      "base_url": "https://whoami.svcpass.com",
+      "description": "Whoami echo endpoint - returns request details"
+    }
+  }
+}
