@@ -37,7 +37,6 @@
       "url": "https://example.com"
     },
     "recurrence_allow_cron": true,
-    "recurrence_enabled": true,
     "recurrence_max_interval_seconds": 86400,
     "recurrence_min_interval_seconds": 1
   },
