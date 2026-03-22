@@ -45,7 +45,7 @@
   "user_access_interfaces": {
     "whoami-gateway": {
       "access_method": "http",
-      "base_url": "${GATEWAY_BASE_URL}/whoami",
+      "base_url": "${API_GATEWAY_BASE_URL}/whoami",
       "description": "Send requests to the whoami echo service via UnitySVC gateway",
       "request_transformer": {
         "set_body": "{{ enrollment.parameters | tojson }}"
