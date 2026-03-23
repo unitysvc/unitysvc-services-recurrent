@@ -17,8 +17,8 @@
     "type": "revenue_share"
   },
   "schema": "offering_v1",
-  "service_type": "scheduled_task",
-  "capabilities": ["scheduled-task"],
+  "service_type": "monitoring",
+  "capabilities": ["scheduled-task", "monitoring"],
   "status": "ready",
   "tagline": "Recurrent echo service for testing",
   "time_created": "2026-02-19T00:00:00Z",
